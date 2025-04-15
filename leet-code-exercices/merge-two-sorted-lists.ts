@@ -10,7 +10,7 @@
  * }
  */
 
-class ListNode {
+export class ListNode {
     val: number
     next: ListNode | null
     constructor(val?: number, next?: ListNode | null) {
@@ -71,7 +71,7 @@ function mergeTwoLists2(list1: ListNode | null, list2: ListNode | null): ListNod
     return dummy.next;
 }
 
-function arrayToListNode(arr: number[]): ListNode | null {
+ export function arrayToListNode(arr: number[]): ListNode | null {
     if(arr.length === 0) return null;
     const head = new ListNode(arr[0]);
     let current = head;
@@ -82,7 +82,7 @@ function arrayToListNode(arr: number[]): ListNode | null {
     return head;
 }
 
-function listNodeToArray(head: ListNode | null): number[] {
+export function listNodeToArray(head: ListNode | null): number[] {
     const arr: number[] =[];
     let current = head;
     while(current !==null){
