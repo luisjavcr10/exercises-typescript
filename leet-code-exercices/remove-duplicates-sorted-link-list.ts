@@ -3,8 +3,7 @@ import {arrayToListNode, listNodeToArray} from "./merge-two-sorted-lists";
 
 function deleteDuplicates(head: ListNode | null): number[] {
     if(head === null){
-        const dummy = new ListNode();
-        return listNodeToArray(dummy.next);
+        return listNodeToArray((new ListNode()).next);
     };
     let value: ListNode = head;
     let current: ListNode | null = head.next;
